@@ -124,7 +124,7 @@ class Thread extends BaseModel
         return $this->posts()->orderBy('created_at', 'desc')->first();
     }
 
-    public function markAsRead(int $userId): void
+    public function markAsRead(int | string $userId): void
     {
         if ($this->isOld) {
             return;
